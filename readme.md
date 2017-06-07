@@ -1,4 +1,4 @@
-# eth-price [![Build Status](https://travis-ci.org/brh55/eth-price.svg?branch=master)](https://travis-ci.org/brh55/eth-price) [![Coverage Status](https://coveralls.io/repos/github/brh55/eth-price/badge.svg?branch=master)](https://coveralls.io/github/brh55/eth-price?branch=master)
+# eth-price [![Travis branch](https://img.shields.io/travis/brh55/eth-price/master.svg?style=flat-square)](https://travis-ci.org/brh55/eth-price) [![Coveralls branch](https://img.shields.io/coveralls/brh55/eth-price/master.svg?style=flat-square)](https://coveralls.io/github/brh55/eth-price?branch=master)
 
 > ❤️ A CLI to get the current ETH price from your terminal in USD or other cryptocurrency symbols
 
