@@ -1,10 +1,27 @@
 'use strict';
-module.exports = (input, opts) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
+const popsicle = require('popsicle');
+
+module.exports = toSymbol => {
+	if (typeof toSymbol === 'string') {
+		toSymbol = toSymbol.toUpperCase();
+	} else {
+		toSymbol = 'USD';
 	}
 
-	opts = opts || {};
+	return popsicle.request({
+		method: 'POST',
+		url: 'https://min-api.cryptocompare.com/data/price',
+		query: {
+			fsym: 'ETH',
+			tsyms: toSymbol
+		}
+	})
+		.use(popsicle.plugins.parse(['json']))
+		.then(resp => resp.body)
+		.then(data => {
+			const symbols = Object.keys(data);
 
-	return input + ' & ' + (opts.postfix || 'rainbows');
+			return symbols
+				.map(symbol => `${symbol}: ${data[symbol]}`);
+		});
 };

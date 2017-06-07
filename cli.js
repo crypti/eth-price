@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require('meow');
-const cliEthPrice = require('.');
+const ethPrice = require('.');
 
 const cli = meow(`
 	Usage
-	  $ cli-eth-price [input]
-
-	Options
-	  --foo  Lorem ipsum [Default: false]
+	  $ eth-price [toSymbol]
 
 	Examples
-	  $ cli-eth-price
-	  unicorns & rainbows
-	  $ cli-eth-price ponies
-	  ponies & rainbows
+	  $ eth-price
+      USD: 262.69
+      $ eth-price btc
+      BTC: 0.0927
+      $ eth-price xrp,btc,usd
+      XRP: 937.07
+      BTC: 0.09277
+      USD: 261.91
+
 `);
 
-console.log(cliEthPrice(cli.input[0] || 'unicorns'));
+ethPrice(cli.input[0])
+	.then(prices => prices.forEach(price => console.log(price)));
