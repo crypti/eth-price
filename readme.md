@@ -1,6 +1,6 @@
 # eth-price [![Travis branch](https://img.shields.io/travis/brh55/eth-price/master.svg?style=flat-square)](https://travis-ci.org/brh55/eth-price) [![Coveralls branch](https://img.shields.io/coveralls/brh55/eth-price/master.svg?style=flat-square)](https://coveralls.io/github/brh55/eth-price?branch=master)
 
-> ❤️ A CLI to get the current ETH price from your terminal in USD or other cryptocurrency symbols
+> 💫 A CLI app to grab the current ETH price from your terminal in USD and/or other cryptocurrency symbols
 
 A super simple CLI utilizing [CryptoCompare API](https://www.cryptocompare.com/api/) to grab the ETH price during a serious code session.
 
