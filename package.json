@@ -1,46 +1,47 @@
 {
-  "name": "eth-price",
-  "version": "0.1.0",
-  "description": "Get the current ETH price from your terminal",
-  "license": "MIT",
-  "repository": "brh55/eth-price",
-  "author": {
-    "name": "brh55",
-    "email": "brandonhim@live.com",
-    "url": "github.com/brh55/eth-price"
-  },
-  "bin": "cli.js",
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && nyc ava"
-  },
-  "files": [
-    "index.js",
-    "cli.js"
-  ],
-  "keywords": [
-    "cli-app",
-    "cli",
-    ""
-  ],
-  "dependencies": {
-    "meow": "^3.7.0",
-    "ora": "^1.2.0",
-    "popsicle": "^9.1.0"
-  },
-  "devDependencies": {
-    "ava": "^0.17.0",
-    "coveralls": "^2.11.12",
-    "nock": "^9.0.13",
-    "nyc": "^10.0.0",
-    "xo": "^0.17.0"
-  },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ]
-  }
+	"name": "eth-price",
+	"version": "0.1.2",
+	"description": "Get the current ETH price from your terminal",
+	"license": "MIT",
+	"repository": "brh55/eth-price",
+	"author": {
+		"name": "brh55",
+		"email": "brandonhim@live.com",
+		"url": "github.com/brh55/eth-price"
+	},
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && nyc ava"
+	},
+	"files": [
+		"index.js",
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"ethereum",
+		"cryptocurrency"
+	],
+	"dependencies": {
+		"meow": "^3.7.0",
+		"ora": "^1.2.0",
+		"popsicle": "^9.1.0"
+	},
+	"devDependencies": {
+		"ava": "^0.17.0",
+		"coveralls": "^2.11.12",
+		"nock": "^9.0.13",
+		"nyc": "^10.0.0",
+		"xo": "^0.17.0"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
 }

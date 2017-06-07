@@ -13,10 +13,12 @@ const cli = meow(`
 	  $ eth-price [toSymbol]
 
 	Examples
-	  $ eth-price
+      $ eth-price
       USD: 262.69
+
       $ eth-price btc
       BTC: 0.0927
+
       $ eth-price xrp,btc,usd
       XRP: 937.07
       BTC: 0.09277
