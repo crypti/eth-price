@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 const meow = require('meow');
-const ethPrice = require('.');
 const ora = require('ora');
+
+const ethPrice = require('.');
 
 const spinner = ora('Fetching prices');
 spinner.color = 'magenta';
@@ -25,9 +26,8 @@ const cli = meow(`
       USD: 261.91
 `);
 
-
 ethPrice(cli.input[0])
 	.then(prices => {
 		spinner.stop();
-		prices.forEach(price => console.log(price))
+		prices.forEach(price => console.log(price));
 	});
