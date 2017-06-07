@@ -44,10 +44,10 @@ ethPrice('usd,btc');
 
 ## API
 
-### ethPrice(toSymbol)
+### ethPrice(toSymbols)
 Returns a string formatted list of the prices in their symbols.
 
-#### toSymbol
+#### toSymbols
 
 Type: `string`
 
