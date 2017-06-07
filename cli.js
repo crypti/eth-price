@@ -24,7 +24,7 @@ const cli = meow(`
 `);
 
 
-ethPrice('usd')
+ethPrice(cli.input[0])
 	.then(prices => {
 		spinner.stop();
 		prices.forEach(price => console.log(price))
