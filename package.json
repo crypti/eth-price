@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "meow": "^3.7.0",
+    "ora": "^1.2.0",
     "popsicle": "^9.1.0"
   },
   "devDependencies": {

@@ -2,6 +2,11 @@
 'use strict';
 const meow = require('meow');
 const ethPrice = require('.');
+const ora = require('ora');
+
+const spinner = ora('Fetching prices');
+spinner.color = 'magenta';
+spinner.start();
 
 const cli = meow(`
 	Usage
@@ -16,8 +21,11 @@ const cli = meow(`
       XRP: 937.07
       BTC: 0.09277
       USD: 261.91
-
 `);
 
-ethPrice(cli.input[0])
-	.then(prices => prices.forEach(price => console.log(price)));
+
+ethPrice('usd')
+	.then(prices => {
+		spinner.stop();
+		prices.forEach(price => console.log(price))
+	});
