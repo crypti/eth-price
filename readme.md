@@ -2,6 +2,29 @@
 
 > A CLI to get the current ETH price from your terminal in USD or other cryptocurrency symbols
 
+This is just a simple CLI utilizing [CryptoCompare API](https://www.cryptocompare.com/api/) to grab the ETH price during the midst of some serious code sessions.
+
+```
+$ npm install --global eth-price
+```
+
+```
+$ eth-price --help
+
+     Usage
+      $ eth-price [toSymbol]
+
+     Examples
+      $ eth-price
+      USD: 262.69
+      $ eth-price btc
+      BTC: 0.0927
+      $ eth-price xrp,btc,usd
+      XRP: 937.07
+      BTC: 0.09277
+      USD: 261.91
+```
+
 ## Install
 
 ```
@@ -25,30 +48,6 @@ ethPrice('usd,btc');
 Type: `string`
 
 The symbols you want the ETH price in.
-
-## CLI
-
-```
-$ npm install --global eth-price
-```
-
-```
-$ eth-price --help
-
-	Usage
-	  $ eth-price [toSymbol]
-
-	Examples
-	  $ eth-price
-      USD: 262.69
-      $ eth-price btc
-      BTC: 0.0927
-      $ eth-price xrp,btc,usd
-      XRP: 937.07
-      BTC: 0.09277
-      USD: 261.91
-```
-
 
 ## License
 
