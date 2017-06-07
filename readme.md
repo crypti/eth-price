@@ -4,6 +4,7 @@
 
 This is just a simple CLI utilizing [CryptoCompare API](https://www.cryptocompare.com/api/) to grab the ETH price during the midst of some serious code sessions.
 
+## Usage
 ```
 $ npm install --global eth-price
 ```
@@ -25,13 +26,15 @@ $ eth-price --help
       USD: 261.91
 ```
 
-## Install
+## JavaScript Usage
+
+### Install
 
 ```
 $ npm install --save eth-price
 ```
 
-## Usage
+### Usage
 ```js
 const ethPrice = require('eth-price');
 
@@ -42,12 +45,13 @@ ethPrice('usd,btc');
 ## API
 
 ### ethPrice(toSymbol)
+Returns a string formatted list of the prices in their symbols.
 
 #### toSymbol
 
 Type: `string`
 
-The symbols you want the ETH price in.
+A string list of symbols you want the ETH price in.
 
 ## License
 
