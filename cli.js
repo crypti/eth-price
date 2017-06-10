@@ -26,7 +26,9 @@ const cli = meow(`
       USD: 261.91
 `);
 
-ethPrice(cli.input[0])
+const input = cli.input.map(item => item.replace(/,|\s+/g, '')).join(',');
+
+ethPrice(input)
 	.then(prices => {
 		spinner.stop();
 		prices.forEach(price => console.log(price));
