@@ -22,3 +22,11 @@ test('Get prices in format', async t => {
 	t.is(prices[0], 'USD: 260.21');
 	t.is(prices[1], 'BTC: 0.0973');
 });
+
+test('Forgives whitespace in currency list', async t => {
+	t.plan(2);
+
+	const prices = await fn('usd,     btc');
+	t.is(prices[0], 'USD: 260.21');
+	t.is(prices[1], 'BTC: 0.0973');
+});
