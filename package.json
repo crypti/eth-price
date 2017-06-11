@@ -27,9 +27,9 @@
 		"cryptocurrency"
 	],
 	"dependencies": {
+		"isomorphic-fetch": "^2.2.1",
 		"meow": "^3.7.0",
-		"ora": "^1.2.0",
-		"popsicle": "^9.1.0"
+		"ora": "^1.2.0"
 	},
 	"devDependencies": {
 		"ava": "^0.17.0",

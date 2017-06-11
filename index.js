@@ -1,23 +1,16 @@
 'use strict';
-const popsicle = require('popsicle');
+const fetch = require('isomorphic-fetch');
 
 module.exports = toSymbol => {
+	let symbols = 'USD';
 	if (typeof toSymbol === 'string') {
-		toSymbol = toSymbol.toUpperCase();
-	} else {
-		toSymbol = 'USD';
+		symbols = toSymbol.split(',').map(s => s.toUpperCase().replace(/\s+/g, '')).join(',');
 	}
 
-	return popsicle.request({
-		method: 'POST',
-		url: 'https://min-api.cryptocompare.com/data/price',
-		query: {
-			fsym: 'ETH',
-			tsyms: toSymbol
-		}
-	})
-		.use(popsicle.plugins.parse(['json']))
-		.then(resp => resp.body)
+	const url = `https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=${symbols}`;
+
+	return fetch(url)
+		.then(resp => resp.json())
 		.then(data => {
 			const symbols = Object.keys(data);
 
