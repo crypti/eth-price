@@ -4,7 +4,7 @@ const fetch = require('isomorphic-fetch');
 module.exports = toSymbol => {
 	let symbols = 'USD';
 	if (typeof toSymbol === 'string') {
-		symbols = toSymbol.toUpperCase().replace(/\s+/g, '');
+		symbols = toSymbol.split(',').map(s => s.toUpperCase().replace(/\s+/g, '')).join(',');
 	}
 
 	const url = `https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=${symbols}`;
