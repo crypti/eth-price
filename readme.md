@@ -61,4 +61,4 @@ A string list of symbols you want the ETH price in.
 
 ## License
 
-MIT © [Brandon Him](https://github.com/brh55/eth-price)
+MIT © [Crypti Team](https://github.com/crypti/eth-price)
