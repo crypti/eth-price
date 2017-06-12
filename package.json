@@ -1,6 +1,6 @@
 {
 	"name": "eth-price",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "A CLI to get the current ETH price from your terminal in USD or other cryptocurrency symbols",
 	"license": "MIT",
 	"repository": "brh55/eth-price",
