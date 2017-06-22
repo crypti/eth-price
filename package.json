@@ -1,14 +1,21 @@
 {
-	"name": "eth-price",
+	"name": "@crypti/eth-price",
 	"version": "0.1.5",
 	"description": "A CLI to get the current ETH price from your terminal in USD or other cryptocurrency symbols",
 	"license": "MIT",
-	"repository": "brh55/eth-price",
-	"author": {
-		"name": "brh55",
-		"email": "brandonhim@live.com",
-		"url": "github.com/brh55/eth-price"
-	},
+	"repository": "crypti/eth-price",
+  "contributors": [
+    {
+      "name": "Brandon Him",
+      "email": "brandonhim@live.com",
+      "url": "github.com/brh55"
+    },
+    {
+      "name": "Michael Wuergler",
+      "email": "senjudev@gmail.com",
+      "url": "github.com/radiovisual"
+    }
+  ],
 	"bin": "cli.js",
 	"engines": {
 		"node": ">=4"
